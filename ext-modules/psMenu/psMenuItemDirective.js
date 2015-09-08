@@ -12,7 +12,8 @@
             templateUrl:"ext-modules/psMenu/psMenuItemTemplate.html",
 
             scope:{
-                label:'@'
+                label:'@',
+                icon:'@'
             },
             //in the link functon we can also pass a controller object
             link:function(scope,elem,attr,ctrl){
