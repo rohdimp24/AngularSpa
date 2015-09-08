@@ -9,6 +9,9 @@
             transclude:true,
             scope:{
 
+                title:'@',
+                subtitle:'@',
+                iconFile:'@'
             },
             controller:"psFrameworkController",
             //this path will be configured later using the gulp
