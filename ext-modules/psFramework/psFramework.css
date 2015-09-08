@@ -27,3 +27,12 @@
     font-size: 13px;
     margin-top: -13px;
 }
+
+/** this will center the buttons */
+.ps-right-side-controls{
+    line-height: 60px;
+}
+
+.ps-right-side-controls >div{
+    text-align: right;
+}
