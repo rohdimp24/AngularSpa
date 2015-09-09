@@ -11,15 +11,20 @@
             //listen for the event from the menu
             $scope.$on('ps-menu-item-selected-event',function(evt,data){
                 $scope.routeString=data.route;
+                //hide the menu once you have selected something from the menu specialliy on a smart phone
+                $scope.checkWidth();
+                broadcastMenuState()
 
             })
 
             //listen for the jquery event  so on and not $on
             $($window).on('resize.psFramework',function(){
                 $scope.$apply(function(){
-                    //note if we want to create a local function and not on the scope then we need to use the timeout functionality
+                     //note if we want to create a local function and not on the scope then we need to use the timeout functionality
                     //so that the function checkwidth can be called after angularjs digest cycle
                     $scope.checkWidth();
+                   // so that once the bar icon is visible the menu is hidden
+                    broadcastMenuState();
                 })
 
             });
