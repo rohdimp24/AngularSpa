@@ -3,7 +3,8 @@
  */
 (function(){
 
-    angular.module("psFramework").controller("psFrameworkController",['$scope','$window','$timeout',function($scope,$window,$timeout){
+    angular.module("psFramework").controller("psFrameworkController",['$scope','$window','$timeout','$rootScope',
+        function($scope,$window,$timeout,$rootScope ){
 
             $scope.isMenuButtonVisible=true;
             $scope.isMenuVisible=true;
@@ -33,7 +34,16 @@
             //raise an event so that menu can be hidden ..this will be listened by the menu
             $scope.menuButtonClicked=function(){
                 $scope.isMenuVisible=!$scope.isMenuVisible;
+                broadcastMenuState();
+                //$scope.$apply();
 
+            }
+
+            //while rasing the event we are sending the state of the menuvisible
+            var broadcastMenuState=function(){
+                $rootScope.$broadcast('ps-menu-show',{
+                    show:$scope.isMenuVisible
+                })
             }
 
 
