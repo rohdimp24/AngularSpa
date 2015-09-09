@@ -7,7 +7,7 @@
 
             $scope.isMenuButtonVisible=true;
             $scope.isMenuVisible=true;
-            //listen for the event
+            //listen for the event from the menu
             $scope.$on('ps-menu-item-selected-event',function(evt,data){
                 $scope.routeString=data.route;
 
@@ -28,6 +28,13 @@
                 $($window).off('resize.psFramework');
 
             });
+
+
+            //raise an event so that menu can be hidden ..this will be listened by the menu
+            $scope.menuButtonClicked=function(){
+                $scope.isMenuVisible=!$scope.isMenuVisible;
+
+            }
 
 
             $scope.checkWidth=function(){

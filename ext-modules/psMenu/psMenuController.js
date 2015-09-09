@@ -18,6 +18,7 @@
         }
 
 
+        //this is raising the event
         this.setRoute=function(route){
 
             //using the root scope we will broadcast this route information to all the listeners..we assume that the other external modules
