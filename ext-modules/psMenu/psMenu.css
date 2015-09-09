@@ -42,6 +42,14 @@
     margin-right: 10px;
 }
 
+
+.ps-menu-active-indicator{
+    float:right;
+    color:#ddd;
+    margin-right: 0px;
+    margin-top:8px;
+}
+
 /** if we dont want to select the text of the menu item **/
 .ps-noselect {
     -webkit-touch-callout: none;

@@ -33,7 +33,16 @@
                     })
 
 
-                })
+
+                });
+
+
+                //check if this is the active element that was set earlier
+                scope.isActive=function(){
+                    return elem===ctrl.getActiveElement();
+
+
+                }
 
 
             }

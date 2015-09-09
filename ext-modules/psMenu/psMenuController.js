@@ -13,6 +13,10 @@
             $scope.activeElement=el;
         }
 
+        this.getActiveElement=function(){
+            return $scope.activeElement;
+        }
+
 
         this.setRoute=function(route){
 
