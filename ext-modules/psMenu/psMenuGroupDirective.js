@@ -16,11 +16,22 @@
             transclude:true,
             scope:{
                 label:'@',
-                icon:'@',
+                icon:'@'
 
             },
             //in the link functon we can also pass a controller object
             link:function(scope,elem,attr,ctrl){
+                //this will take care of clicking on the menu
+                scope.isOpen=false;
+
+                scope.closeMenu=function(){
+                   scope.isOpen=false;
+                }
+
+                scope.clicked=function()
+                {
+                    scope.isOpen=!scope.isOpen;
+                }
 
 
             }
